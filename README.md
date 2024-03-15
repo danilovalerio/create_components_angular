@@ -25,3 +25,34 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Estructure Application
+
+```mermaid
+
+flowchart TB
+    classDef done fill:#009900,stroke:#ffffff
+    classDef todo fill:#990000,stroke:#ffffff
+    classDef in_progress fill:#999900,stroke:#ffffff
+
+    subgraph Projeto Angular
+
+      subgraph App Module
+
+        AppComponent[AppComponent]
+        CardComponent[CardComponent]
+        CardButtonComponent[CardButtonComponent]
+        CardRoxoComponent[CardRoxoComponent]
+        CardRoxoButtonComponent[CardRoxoButtonComponent]
+
+      end
+
+      subgraph Cards Module
+        CardComponentN[CardComponentN]
+
+      end
+    end
+
+
+
+```
