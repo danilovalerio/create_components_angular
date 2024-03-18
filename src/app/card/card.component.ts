@@ -14,7 +14,7 @@ interface IInfos {
   selector: 'app-card', //name component for html
   templateUrl: './card.component.html', //path for template component
   styleUrl: './card.component.scss', //path for styles for component
-  encapsulation: ViewEncapsulation.None, //remove o encapsulamento desse component
+  //encapsulation: ViewEncapsulation.None, //remove o encapsulamento desse component
 })
 export class CardComponent {
   plan: IPlan = {
