@@ -30,3 +30,11 @@
     font-weight: bold;
   }
 }
+
+:host ::ng-deep #button-cancel-primeiro .card-button-cancel {
+  background-color: darkmagenta !important;
+}
+
+:host ::ng-deep #button-cancel-segundo .card-button-cancel {
+  background-color: rgb(1, 87, 13) !important;
+}
