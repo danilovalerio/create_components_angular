@@ -22,6 +22,7 @@
 }
 
 //alterar as props do componente filho
-::ng-deep .card-button-cancel {
+//aqui podemos usar class . ou id # ao referencia o item
+::ng-deep #cancel-button .card-button-cancel {
   background-color: yellow !important;
 }
