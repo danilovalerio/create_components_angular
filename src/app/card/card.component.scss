@@ -20,3 +20,7 @@
     font-size: 30px;
   }
 }
+
+:host ::ng-deep mat-slider .mdc-slider__track--active_fill {
+  border-color: deeppink !important;
+}
