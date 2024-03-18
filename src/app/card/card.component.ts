@@ -15,7 +15,7 @@ interface IInfos {
   templateUrl: './card.component.html', //path for template component
   styleUrl: './card.component.scss', //path for styles for component
   //encapsulation: ViewEncapsulation.None, //remove o encapsulamento desse component
-  encapsulation: ViewEncapsulation.Emulated, //padrão mantendo o encapsulamento e é afetado por estilos globais
+  encapsulation: ViewEncapsulation.ShadowDom, //isola esse componente e nenhum estilo global pode sobrescrever o CSS desse componente,ele só pode alterar o filho
 })
 export class CardComponent {
   plan: IPlan = {
