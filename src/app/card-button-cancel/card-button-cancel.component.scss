@@ -1,9 +1,12 @@
+//caminho relativo
+@import "../../styles.scss";
+
 .card-button-cancel {
   font-size: 16px;
   text-align: center;
   margin-top: 10px;
   border-radius: 25px;
-  background-color: red;
+  background-color: $bgColorDefault;
   cursor: pointer;
   font-weight: bold;
   padding: 10px;
