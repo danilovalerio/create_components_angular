@@ -40,15 +40,15 @@ flowchart TB
       subgraph App Module
 
         AppComponent[AppComponent]
-        CardComponent[CardComponent]
-        CardButtonComponent[CardButtonComponent]
-        CardRoxoComponent[CardRoxoComponent]
-        CardRoxoButtonComponent[CardRoxoButtonComponent]
+
 
       end
 
       subgraph Cards Module
-        CardComponentN[CardComponentN]
+        CardComponent[CardComponent]
+        CardButtonComponent[CardButtonComponent]
+        CardRoxoComponent[CardRoxoComponent]
+        CardRoxoButtonComponent[CardRoxoButtonComponent]
 
       end
     end
