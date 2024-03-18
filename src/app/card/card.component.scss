@@ -20,3 +20,8 @@
     font-size: 40px;
   }
 }
+
+//alterar as props do componente filho
+::ng-deep .card-button-cancel {
+  background-color: yellow !important;
+}
