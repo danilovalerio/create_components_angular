@@ -8,14 +8,16 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
   plan = {
-    type: 'Simples',
-    price: 100,
+    infos: {
+      type: 'Simples',
+      price: 100,
+    },
   };
 
   getFullPrice() {
     setTimeout(() => {
-      this.plan.type = 'Simples V2';
+      this.plan.infos.type = 'Simples V2';
     }, 3000);
-    return 'R$ ' + this.plan.price + ',00/Mês';
+    return 'R$ ' + this.plan.infos.price + ',00/Mês';
   }
 }
