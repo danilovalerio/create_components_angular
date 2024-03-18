@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 
+interface IPlan {
+  infos: IInfos;
+}
+
+interface IInfos {
+  type: string;
+  price: number;
+}
+
 //decorator with props default
 @Component({
   selector: 'app-card', //name component for html
@@ -7,7 +16,7 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.scss', //path for styles for component
 })
 export class CardComponent {
-  plan = {
+  plan: IPlan = {
     infos: {
       type: 'Simples',
       price: 100,
