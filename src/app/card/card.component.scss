@@ -20,9 +20,3 @@
     font-size: 40px;
   }
 }
-
-//alterar as props do componente filho
-//aqui podemos usar class . ou id # ao referencia o item
-:host ::ng-deep .card-button-cancel {
-  background-color: yellow !important;
-}
