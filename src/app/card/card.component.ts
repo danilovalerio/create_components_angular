@@ -18,7 +18,7 @@ interface IInfos {
   //encapsulation: ViewEncapsulation.ShadowDom, //isola esse componente e nenhum estilo global pode sobrescrever o CSS desse componente,ele só pode alterar o filho
 })
 export class CardComponent {
-  @Input() planType: string = '';
+  @Input('planTypeAlias') planType: string = '';
   @Input() planPrice: number = 0;
 
   plan: IPlan = {
