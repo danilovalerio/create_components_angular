@@ -50,7 +50,7 @@ export class CardComponent {
    * required obriga a passagem desse parâmetro
    * somente a partir da versão 16 do angular
    */
-  @Input({ required: true, transform: numberAttribute })
+  @Input({ required: true })
   planPrice: number = 0;
 
   plan: IPlan = {
