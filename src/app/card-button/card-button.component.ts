@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  booleanAttribute,
+} from '@angular/core';
 
 @Component({
   selector: 'app-card-button',
@@ -7,6 +13,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './card-button.component.scss',
 })
 export class CardButtonComponent {
+  //verifica se o atributo btnDisabled está referenciado, se for o caso e passa o true
+  @Input({ transform: booleanAttribute }) btnDisabled: boolean = false;
+
   @Output('btnAlias') btnClickEmitter = new EventEmitter<boolean>();
 
   onButtonClick() {
