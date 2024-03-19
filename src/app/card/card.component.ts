@@ -18,27 +18,23 @@ interface IInfos {
   //encapsulation: ViewEncapsulation.ShadowDom, //isola esse componente e nenhum estilo global pode sobrescrever o CSS desse componente,ele só pode alterar o filho
 })
 export class CardComponent {
-  private _planType: string = '';
-
   /**
    * O bom de usar o Alias nos permite
    * mudar o nome das variáveis sem quebrar
    * quem consumir esses dados
    */
-  @Input('planTypeAlias')
-  set planType(value: string) {
-    this._planType = value.toUpperCase();
-  }
-
-  get planType(): string {
-    return this._planType;
-  }
+  @Input({
+    alias: 'planType',
+    transform: (value: string) => value.toUpperCase(),
+  })
+  planType: string = '';
 
   /**
    * required obriga a passagem desse parâmetro
    * somente a partir da versão 16 do angular
    */
-  @Input({ required: true }) planPrice: number = 0;
+  @Input({ required: true })
+  planPrice: number = 0;
 
   plan: IPlan = {
     infos: {
@@ -62,9 +58,5 @@ export class CardComponent {
   btnClicked(valueEmitted: boolean) {
     console.log('Botão filho foi clicado! Valor passado: ', valueEmitted);
     console.log('planType', this.planType);
-  }
-
-  handlePlanType(text: string) {
-    this.planType = text;
   }
 }

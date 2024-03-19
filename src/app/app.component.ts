@@ -16,4 +16,8 @@ export class AppComponent {
   card = {
     plan: this.plan,
   };
+
+  handlePlanType(text: string) {
+    this.card.plan.type = text;
+  }
 }
