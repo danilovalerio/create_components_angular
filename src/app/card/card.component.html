@@ -8,3 +8,11 @@
   <app-card-button (btnAlias)="btnClicked($event)"></app-card-button>
   <app-card-button-cancel></app-card-button-cancel>
 </div>
+
+<br />
+<input
+  #meuInput
+  type="text"
+  (keyup)="handlePlanType(meuInput.value)"
+  placeholder="Digite o plano"
+/>
