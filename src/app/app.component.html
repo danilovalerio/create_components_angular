@@ -1,4 +1,7 @@
 <div class="cards-container">
-  <app-card></app-card>
+  <app-card
+    [planType]="card.plan.type"
+    [planPrice]="card.plan.price"
+  ></app-card>
   <app-card-roxo></app-card-roxo>
 </div>
