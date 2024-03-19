@@ -18,8 +18,18 @@ interface IInfos {
   //encapsulation: ViewEncapsulation.ShadowDom, //isola esse componente e nenhum estilo global pode sobrescrever o CSS desse componente,ele só pode alterar o filho
 })
 export class CardComponent {
+  /**
+   * O bom de usar o Alias nos permite
+   * mudar o nome das variáveis sem quebrar
+   * quem consumir esses dados
+   */
   @Input('planTypeAlias') planType: string = '';
-  @Input() planPrice: number = 0;
+
+  /**
+   * required obriga a passagem desse parâmetro
+   * somente a partir da versão 16 do angular
+   */
+  @Input({ required: true }) planPrice: number = 0;
 
   plan: IPlan = {
     infos: {
