@@ -48,4 +48,9 @@ export class CardComponent {
     }, 3000);
     return 'R$ ' + this.plan.infos.price + ',00/Mês';
   }
+
+  //botao filho foi clicado
+  btnClicked(valueEmitted: boolean) {
+    console.log('Botão filho foi clicado! Valor passado: ', valueEmitted);
+  }
 }
