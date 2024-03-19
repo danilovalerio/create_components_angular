@@ -9,6 +9,18 @@ interface IInfos {
   price: number;
 }
 
+/**
+ * Caso tivesse mais regras para realizar no transform do input o ideal
+ * era estrair para uma function, assim deixando mais compreensível o código
+ *
+ * @param value recebe o valor a ser tratado dentro da function
+ * @returns
+ */
+function handlePlanType(value: string) {
+  console.log('handlePlanType', value);
+  return value.toUpperCase();
+}
+
 //decorator with props default
 @Component({
   selector: 'app-card', //name component for html
@@ -25,7 +37,7 @@ export class CardComponent {
    */
   @Input({
     alias: 'planType',
-    transform: (value: string) => value.toUpperCase(),
+    transform: (value: string) => handlePlanType(value),
   })
   planType: string = '';
 
