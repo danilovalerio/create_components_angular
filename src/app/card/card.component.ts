@@ -1,4 +1,9 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewEncapsulation,
+  numberAttribute,
+} from '@angular/core';
 
 interface IPlan {
   infos: IInfos;
@@ -45,7 +50,7 @@ export class CardComponent {
    * required obriga a passagem desse parâmetro
    * somente a partir da versão 16 do angular
    */
-  @Input({ required: true })
+  @Input({ required: true, transform: numberAttribute })
   planPrice: number = 0;
 
   plan: IPlan = {
