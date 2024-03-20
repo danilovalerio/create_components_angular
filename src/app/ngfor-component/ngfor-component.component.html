@@ -1,8 +1,8 @@
 <div class="list">
   <div
     class="item"
-    *ngFor="let person of listPeoples; let ordem = index"
-    [class.item--add]=""
+    *ngFor="let person of listPeoples; let ordem = index; let isOdd = odd"
+    [class.item--odd]="isOdd"
   >
     <div class="item item--add">
       <p class="item__name">{{ ordem }} - {{ person.name }}</p>
