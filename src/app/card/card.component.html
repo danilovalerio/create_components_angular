@@ -1,4 +1,10 @@
-<div class="card">
+<div
+  class="card"
+  [class]="{
+    'card--orange': cardStyle === 'orange' ? true : false,
+    'card--gray': cardStyle === 'gray' ? true : false,
+  }"
+>
   <div class="card__plan card__item">
     Plano <b>{{ planType }}</b>
   </div>
@@ -6,10 +12,10 @@
     <b>{{ getPriceFormated() }}</b>
   </div>
   <app-card-button
-    (btnAlias)="btnClicked($event)"
-    btnDisabled
+    [btnName]="titleButton"
+    [style]="cardStyle === 'orange' ? 'white' : 'purple'"
+    (btnClicado)="btnClicked($event)"
   ></app-card-button>
-  <app-card-button-cancel></app-card-button-cancel>
 </div>
 
 <br />

@@ -13,11 +13,24 @@ export class AppComponent {
     price: 100,
   };
 
+  plan2 = {
+    type: 'Completo',
+    price: 250,
+  };
+
   card = {
     plan: this.plan,
   };
 
+  card2 = {
+    plan: this.plan2,
+  };
+
   handlePlanType(text: string) {
     this.card.plan.type = text;
+  }
+
+  onCardButtonClicked() {
+    console.log('onCardButtonClicked - com chamada de uma possível API');
   }
 }

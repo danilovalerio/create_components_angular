@@ -1,6 +1,8 @@
 import {
   Component,
+  EventEmitter,
   Input,
+  Output,
   ViewEncapsulation,
   numberAttribute,
 } from '@angular/core';
@@ -26,6 +28,17 @@ function handlePlanType(value: string) {
   return value.toUpperCase();
 }
 
+function styleButtonByPlanType(value: string): string {
+  if (value.toUpperCase() === 'SIMPLES') {
+    return 'white';
+  }
+  if (value.toUpperCase() === 'COMPLETO') {
+    return 'purple';
+  } else {
+    return 'white';
+  }
+}
+
 //decorator with props default
 @Component({
   selector: 'app-card', //name component for html
@@ -41,10 +54,16 @@ export class CardComponent {
    * quem consumir esses dados
    */
   @Input({
+    required: true,
     alias: 'planType',
     transform: (value: string) => handlePlanType(value),
   })
   planType: string = '';
+
+  @Input({
+    alias: 'style',
+  })
+  colorBtnPlan: string = 'white';
 
   /**
    * required obriga a passagem desse parâmetro
@@ -60,6 +79,9 @@ export class CardComponent {
     },
   };
 
+  @Input({ required: true })
+  cardStyle: 'orange' | 'gray' = 'orange';
+
   getPriceFormated() {
     return 'R$ ' + this.planPrice + ',00/Mês';
   }
@@ -71,9 +93,37 @@ export class CardComponent {
     return 'R$ ' + this.plan.infos.price + ',00/Mês';
   }
 
+  titleButton = 'Adquirir';
+
+  btnCancelar = 'Cancelar';
+
+  /**
+   * Output para notificar para o
+   * componente pai que esse botão dentro
+   * de card component foi clicado
+   */
+  @Output('btnClicado')
+  btnClickedEmitt = new EventEmitter<void>();
+
   //botao filho foi clicado
   btnClicked(valueEmitted: boolean) {
     console.log('Botão filho foi clicado! Valor passado: ', valueEmitted);
     console.log('planType', this.planType);
+    //emitindo para o componente pai que o botao foi clicado
+    this.btnClickedEmitt.emit();
   }
+
+  /**
+   * Input dos Styles personalizados
+   * Aqui rola um array com o tipos?
+   */
+  @Input({
+    alias: 'card',
+  })
+  card: boolean = false;
+
+  @Input({
+    alias: 'cardRoxo',
+  })
+  cardRoxo: boolean = false;
 }

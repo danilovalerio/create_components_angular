@@ -2,7 +2,6 @@
 
 .card {
   max-width: 350px;
-  background-color: #fd7557;
   border-radius: 25px;
   padding: 30px;
   font-family: "Poppins", sans-serif;
@@ -19,6 +18,14 @@
     font-weight: 600;
     font-size: 30px;
   }
+
+  &--orange {
+    background-color: #fd7557;
+  }
+
+  &--gray {
+    background-color: #ede1ff;
+  }
 }
 
 ::ng-deep .global {
@@ -27,4 +34,35 @@
 
 :host ::ng-deep mat-slider .mdc-slider__track--active_fill {
   border-color: deeppink !important;
+}
+
+.card-roxo {
+  max-width: 350px;
+  background-color: #803b86;
+  border-radius: 25px;
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+
+  &__item {
+    padding: 10px;
+  }
+
+  &__plan {
+    font-size: 22px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  &__button {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
 }
