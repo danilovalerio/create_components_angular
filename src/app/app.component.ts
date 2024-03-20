@@ -33,4 +33,6 @@ export class AppComponent {
   onCardButtonClicked() {
     console.log('onCardButtonClicked - com chamada de uma possível API');
   }
+
+  name: string = 'Danilo';
 }

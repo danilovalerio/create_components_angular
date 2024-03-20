@@ -24,3 +24,9 @@
 
 <hr />
 <h3><b>Two Way Data Binding</b></h3>
+<input
+  #meuInput
+  type="text"
+  (keyup)="handlePlanType(meuInput.value)"
+  placeholder="Digite o plano"
+/>
