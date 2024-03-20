@@ -34,5 +34,10 @@ export class AppComponent {
     console.log('onCardButtonClicked - com chamada de uma possível API');
   }
 
-  name: string = 'Danilo';
+  name: string = 'Danilo Load';
+
+  handleInputChange(event: any) {
+    console.log(event);
+    this.name = event;
+  }
 }

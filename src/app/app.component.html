@@ -24,9 +24,15 @@
 
 <hr />
 <h3><b>Two Way Data Binding</b></h3>
+<!--
+  ngModel -> Input
+  ngModelChange -> Output
+ -->
 <input
-  #meuInput
   type="text"
-  (keyup)="handlePlanType(meuInput.value)"
-  placeholder="Digite o plano"
+  [ngModel]="name"
+  (ngModelChange)="handleInputChange($event)"
+  placeholder="Nome"
 />
+
+<h4>Nome digitado: {{ name }}</h4>
