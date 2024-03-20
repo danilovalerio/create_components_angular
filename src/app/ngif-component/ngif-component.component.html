@@ -1,0 +1,25 @@
+<div
+  style="background-color: green; margin: 12px"
+  *ngIf="minhaPropDiva; else meuTemplate"
+>
+  Sou uma div!
+</div>
+
+<ng-template #meuTemplate>
+  <div style="background-color: red; margin: 12px">Sou uma outra div!</div>
+</ng-template>
+
+<ng-container
+  *ngIf="minhaPropDiva; then meuTemplateNovo; else meuTemplateOutro"
+>
+</ng-container>
+
+<ng-template #meuTemplateNovo>
+  <div style="background-color: green; margin: 12px">Sou a then!</div>
+</ng-template>
+
+<ng-template #meuTemplateOutro>
+  <div style="background-color: red; margin: 12px">Sou a else!</div>
+</ng-template>
+
+<button (click)="togglePropDiv()">Toggle</button>
