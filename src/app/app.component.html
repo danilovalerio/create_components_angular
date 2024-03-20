@@ -27,12 +27,8 @@
 <!--
   ngModel -> Input
   ngModelChange -> Output
+  [(ngModel)] -> Two Way Data Binding
  -->
-<input
-  type="text"
-  [ngModel]="name"
-  (ngModelChange)="handleInputChange($event)"
-  placeholder="Nome"
-/>
+<input type="text" [(ngModel)]="name" placeholder="Nome" />
 
 <h4>Nome digitado: {{ name }}</h4>
