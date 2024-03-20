@@ -1,15 +1,11 @@
 <div
+  class="card"
   [class]="{
-    'card': card,
-    'card-roxo': cardRoxo,
+    'card--orange': cardStyle === 'orange' ? true : false,
+    'card--gray': cardStyle === 'gray' ? true : false,
   }"
 >
-  <div
-    [class]="{
-    'card__plan':true,
-    'card__item': true,
-  }"
-  >
+  <div class="card__plan card__item">
     Plano <b>{{ planType }}</b>
   </div>
   <div class="card__price card__item">

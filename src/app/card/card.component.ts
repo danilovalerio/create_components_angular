@@ -52,6 +52,7 @@ export class CardComponent {
    * quem consumir esses dados
    */
   @Input({
+    required: true,
     alias: 'planType',
     transform: (value: string) => handlePlanType(value),
   })
@@ -75,6 +76,9 @@ export class CardComponent {
       price: 100,
     },
   };
+
+  @Input({ required: true })
+  cardStyle: 'orange' | 'gray' = 'orange';
 
   getPriceFormated() {
     return 'R$ ' + this.planPrice + ',00/Mês';
