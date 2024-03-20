@@ -9,6 +9,12 @@
   font-weight: bold;
   padding: 10px;
 
+  position: relative;
+
+  &:active {
+    bottom: -2px;
+  }
+
   &--white {
     background-color: white;
   }
