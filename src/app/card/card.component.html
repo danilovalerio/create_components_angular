@@ -12,15 +12,8 @@
     <b>{{ getPriceFormated() }}</b>
   </div>
   <app-card-button
-    [style]="'white'"
     [btnName]="titleButton"
-    (btnClicado)="btnClicked($event)"
-  ></app-card-button>
-  <!--<app-card-button-cancel></app-card-button-cancel> -->
-
-  <app-card-button
-    [style]="'purple'"
-    [btnName]="btnCancelar"
+    [style]="cardStyle === 'orange' ? 'white' : 'purple'"
     (btnClicado)="btnClicked($event)"
   ></app-card-button>
 </div>
