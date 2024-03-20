@@ -16,6 +16,8 @@ export class CardButtonComponent {
   //verifica se o atributo btnDisabled está referenciado, se for o caso e passa o true
   @Input({ transform: booleanAttribute }) btnDisabled: boolean = false;
 
+  @Input({ alias: 'btnName' }) btnName: string = '';
+
   @Output('btnAlias') btnClickEmitter = new EventEmitter<boolean>();
 
   onButtonClick() {

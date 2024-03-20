@@ -16,10 +16,15 @@
     <b>{{ getPriceFormated() }}</b>
   </div>
   <app-card-button
+    [btnName]="titleButton"
     (btnAlias)="btnClicked($event)"
-    btnDisabled
   ></app-card-button>
-  <app-card-button-cancel></app-card-button-cancel>
+  <!--<app-card-button-cancel></app-card-button-cancel> -->
+
+  <app-card-buttonT
+    [btnName]="btnCancelar"
+    (btnAlias)="btnClicked($event)"
+  ></app-card-buttonT>
 </div>
 
 <br />
