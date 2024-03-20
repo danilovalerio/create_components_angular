@@ -18,7 +18,10 @@ export class CardButtonComponent {
 
   @Input({ alias: 'btnName' }) btnName: string = '';
 
-  @Output('btnAlias') btnClickEmitter = new EventEmitter<boolean>();
+  @Input({ required: true, alias: 'style' })
+  buttonStyle: 'white' | 'purple' = 'white';
+
+  @Output('btnClicado') btnClickEmitter = new EventEmitter<boolean>();
 
   onButtonClick() {
     console.log('onButtonClick');

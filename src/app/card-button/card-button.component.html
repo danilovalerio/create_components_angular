@@ -1,3 +1,11 @@
-<button class="card-button" (click)="onButtonClick()" [disabled]="btnDisabled">
+<button
+  class="card-button"
+  [class]="{
+  'card-button--withe': buttonStyle === 'white' ? true : false,
+  'card-button--purple': buttonStyle === 'purple' ? true : false,
+  }"
+  (click)="onButtonClick()"
+  [disabled]="btnDisabled"
+>
   {{ btnName }}
 </button>

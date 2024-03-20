@@ -8,4 +8,12 @@
   cursor: pointer;
   font-weight: bold;
   padding: 10px;
+
+  &--white {
+    background-color: white;
+  }
+
+  &--purple {
+    background-color: purple;
+  }
 }

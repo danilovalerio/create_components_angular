@@ -26,6 +26,17 @@ function handlePlanType(value: string) {
   return value.toUpperCase();
 }
 
+function styleButtonByPlanType(value: string): string {
+  if (value.toUpperCase() === 'SIMPLES') {
+    return 'white';
+  }
+  if (value.toUpperCase() === 'COMPLETO') {
+    return 'purple';
+  } else {
+    return 'white';
+  }
+}
+
 //decorator with props default
 @Component({
   selector: 'app-card', //name component for html
@@ -45,6 +56,11 @@ export class CardComponent {
     transform: (value: string) => handlePlanType(value),
   })
   planType: string = '';
+
+  @Input({
+    alias: 'style',
+  })
+  colorBtnPlan: string = 'white';
 
   /**
    * required obriga a passagem desse parâmetro
