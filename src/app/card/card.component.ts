@@ -76,4 +76,18 @@ export class CardComponent {
     console.log('Botão filho foi clicado! Valor passado: ', valueEmitted);
     console.log('planType', this.planType);
   }
+
+  /**
+   * Input dos Styles personalizados
+   * Aqui rola um array com o tipos?
+   */
+  @Input({
+    alias: 'card',
+  })
+  card: boolean = false;
+
+  @Input({
+    alias: 'cardRoxo',
+  })
+  cardRoxo: boolean = false;
 }

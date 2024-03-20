@@ -1,5 +1,15 @@
-<div class="card">
-  <div class="card__plan card__item">
+<div
+  [class]="{
+    'card': card,
+    'card-roxo': cardRoxo,
+  }"
+>
+  <div
+    [class]="{
+    'card__plan':true,
+    'card__item': true,
+  }"
+  >
     Plano <b>{{ planType }}</b>
   </div>
   <div class="card__price card__item">

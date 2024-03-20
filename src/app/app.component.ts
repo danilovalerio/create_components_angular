@@ -13,8 +13,17 @@ export class AppComponent {
     price: 100,
   };
 
+  plan2 = {
+    type: 'Completo',
+    price: 250,
+  };
+
   card = {
     plan: this.plan,
+  };
+
+  card2 = {
+    plan: this.plan2,
   };
 
   handlePlanType(text: string) {
