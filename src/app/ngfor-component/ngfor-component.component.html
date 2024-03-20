@@ -1,18 +1,12 @@
 <div class="list">
-  <div class="item item--add">
-    <p class="item__name">Joaquim Moreira</p>
-    <p class="item__age">90 anos</p>
-  </div>
-  <div class="item item--highlighted">
-    <p class="item__name">Joaquim Moreira</p>
-    <p class="item__age">90 anos</p>
-  </div>
-  <div class="item item--add">
-    <p class="item__name">Joaquim Moreira</p>
-    <p class="item__age">90 anos</p>
-  </div>
-  <div class="item">
-    <p class="item__name">Joaquim Moreira</p>
-    <p class="item__age">90 anos</p>
+  <div
+    class="item"
+    *ngFor="let person of listPeoples; let ordem = index"
+    [class.item--add]=""
+  >
+    <div class="item item--add">
+      <p class="item__name">{{ ordem }} - {{ person.name }}</p>
+      <p class="item__age">{{ person.age }} anos</p>
+    </div>
   </div>
 </div>
