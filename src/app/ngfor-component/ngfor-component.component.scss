@@ -6,6 +6,13 @@
 .item {
   padding: 13px;
   background-color: beige;
+  cursor: pointer;
+
+  position: relative;
+
+  &:active {
+    bottom: -2px;
+  }
 
   &__name {
     font-size: 25px;
@@ -22,7 +29,7 @@
   }
 
   &--highlighted {
-    color: white;
+    color: rgb(76, 0, 255);
     background-color: green;
     border: 3px solid yellow;
   }

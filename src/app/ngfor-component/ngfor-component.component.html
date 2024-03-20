@@ -9,6 +9,8 @@
       let isLast = last
     "
     [class.item--odd]="isOdd"
+    [class.item--highlighted]="personSelectedIndex === ordem"
+    (click)="selectPerson(ordem)"
   >
     <div class="item item--add">
       <p class="item__name">{{ ordem }} - {{ person.name }}</p>
