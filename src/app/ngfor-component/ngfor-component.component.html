@@ -1,7 +1,12 @@
 <div class="list">
   <div
     class="item"
-    *ngFor="let person of listPeoples; let ordem = index; let isOdd = odd"
+    *ngFor="
+      let person of listPeoples;
+      let ordem = index;
+      let isOdd = odd;
+      let isEven = even
+    "
     [class.item--odd]="isOdd"
   >
     <div class="item item--add">
