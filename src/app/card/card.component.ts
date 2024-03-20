@@ -1,6 +1,8 @@
 import {
   Component,
+  EventEmitter,
   Input,
+  Output,
   ViewEncapsulation,
   numberAttribute,
 } from '@angular/core';
@@ -95,10 +97,20 @@ export class CardComponent {
 
   btnCancelar = 'Cancelar';
 
+  /**
+   * Output para notificar para o
+   * componente pai que esse botão dentro
+   * de card component foi clicado
+   */
+  @Output('btnClicado')
+  btnClickedEmitt = new EventEmitter<void>();
+
   //botao filho foi clicado
   btnClicked(valueEmitted: boolean) {
     console.log('Botão filho foi clicado! Valor passado: ', valueEmitted);
     console.log('planType', this.planType);
+    //emitindo para o componente pai que o botao foi clicado
+    this.btnClickedEmitt.emit();
   }
 
   /**

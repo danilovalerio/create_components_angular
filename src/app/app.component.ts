@@ -29,4 +29,8 @@ export class AppComponent {
   handlePlanType(text: string) {
     this.card.plan.type = text;
   }
+
+  onCardButtonClicked() {
+    console.log('onCardButtonClicked - com chamada de uma possível API');
+  }
 }
