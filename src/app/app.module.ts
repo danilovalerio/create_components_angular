@@ -9,9 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { NgifComponentComponent } from './ngif-component/ngif-component.component';
 import { NgforComponentComponent } from './ngfor-component/ngfor-component.component';
 import { PersonComponent } from './person/person.component';
+import { NgStyleComponent } from './ng-style/ng-style.component';
 
 @NgModule({
-  declarations: [AppComponent, NgifComponentComponent, NgforComponentComponent, PersonComponent],
+  declarations: [AppComponent, NgifComponentComponent, NgforComponentComponent, PersonComponent, NgStyleComponent],
   imports: [BrowserModule, AppRoutingModule, ComponentsModule, FormsModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
