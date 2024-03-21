@@ -1,8 +1,13 @@
 <h1
   [ngStyle]="{
-  'font-size': '30px',
-  'color': 'red',
+  'font-size': fontSize + 'px',
+  'color': textColor,
   }"
 >
   Sou um H1 Mãe
 </h1>
+
+<button (click)="increaseFontSize()">+A</button>
+<button (click)="decreaseFontSize()">-A</button>
+<br />
+<button (click)="toggleFontColor()">{{ btnText }}</button>
