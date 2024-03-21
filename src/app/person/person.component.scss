@@ -1,0 +1,31 @@
+.item {
+  padding: 13px;
+  background-color: beige;
+  cursor: pointer;
+
+  position: relative;
+
+  &:active {
+    bottom: -2px;
+  }
+
+  &__name {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  &__age {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &--odd {
+    background-color: darkgray;
+  }
+
+  &--highlighted {
+    color: rgb(76, 0, 255);
+    background-color: green;
+    border: 3px solid yellow;
+  }
+}

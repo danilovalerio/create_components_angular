@@ -1,22 +1,19 @@
 <div class="list">
-  <div
-    class="item"
+  <app-person
     *ngFor="
       let person of listPeoples;
-      let ordem = index;
-      let isOdd = odd;
+      let ind = index;
       let isFirst = first;
-      let isLast = last
+      let isLast = last;
+      let isOdd = odd
     "
-    [class.item--odd]="isOdd"
-    [class.item--highlighted]="personSelectedIndex === ordem"
-    (click)="selectPerson(ordem)"
-  >
-    <div class="item item--add">
-      <p class="item__name">{{ ordem }} - {{ person.name }}</p>
-      <p class="item__age">{{ person.age }} anos</p>
-      <p class="item__age" *ngIf="isFirst">É o primeiro</p>
-      <p class="item__age" *ngIf="isLast">É o ultimo</p>
-    </div>
-  </div>
+    [personName]="person.name"
+    [personAge]="person.age"
+    [personIndex]="ind"
+    [isFirst]="isFirst"
+    [isLast]="isLast"
+    [isOdd]="isOdd"
+    [estaSelecionado]="personSelectedIndex === ind"
+    (personSelected)="selectPerson($event)"
+  ></app-person>
 </div>
