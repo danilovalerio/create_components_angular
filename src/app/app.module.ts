@@ -11,6 +11,7 @@ import { NgforComponentComponent } from './ngfor-component/ngfor-component.compo
 import { PersonComponent } from './person/person.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgclassComponent } from './ngclass-c/ngclass.component';
+import { PipesExComponent } from './pipes-ex/pipes-ex.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NgclassComponent } from './ngclass-c/ngclass.component';
     PersonComponent,
     NgStyleComponent,
     NgclassComponent,
+    PipesExComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ComponentsModule, FormsModule],
   providers: [provideAnimationsAsync()],
