@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class PipesExComponent {
   name: string = 'Danilo';
+  person = { name: 'Daniela', age: 'xx' };
 }
