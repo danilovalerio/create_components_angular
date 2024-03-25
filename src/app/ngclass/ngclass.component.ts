@@ -5,4 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './ngclass.component.html',
   styleUrl: './ngclass.component.scss',
 })
-export class NgclassComponent {}
+export class NgclassComponent {
+  isGreen: boolean = true;
+
+  setToGreen() {
+    this.isGreen = true;
+  }
+
+  setToOranage() {
+    this.isGreen = false;
+  }
+}

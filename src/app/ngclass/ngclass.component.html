@@ -1,1 +1,16 @@
-<p>ngclas works!</p>
+<h1
+  [ngClass]="{
+  'is-big is-green': isGreen,
+  'is-orange': !isGreen,
+}"
+>
+  Sou um H1 mamãe!
+</h1>
+
+<!-- <h2 [ngClass]="{
+  'is-big is-green': isGreen,
+  'is-orange': isOrange,
+}">Sou um H2 mamãe!</h2> -->
+
+<button (click)="setToGreen()">Verde</button>
+<button (click)="setToOrange()">Laranja</button>
