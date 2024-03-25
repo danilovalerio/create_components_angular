@@ -12,6 +12,7 @@ import { PersonComponent } from './person/person.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgclassComponent } from './ngclass-c/ngclass.component';
 import { PipesExComponent } from './pipes-ex/pipes-ex.component';
+import { StatusClassPipe } from './pipes/status-class.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PipesExComponent } from './pipes-ex/pipes-ex.component';
     NgStyleComponent,
     NgclassComponent,
     PipesExComponent,
+    StatusClassPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, ComponentsModule, FormsModule],
   providers: [provideAnimationsAsync()],

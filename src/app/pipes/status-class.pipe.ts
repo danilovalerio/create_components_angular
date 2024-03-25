@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StatusClassPipe implements PipeTransform {
   transform(status: number): string {
+    console.log('StatusClassPipe foi chamado.');
     /*
     Ao invés dos if,s poderíamos jogar para dentro de enum's ou um obj que foi o caso aqui entre outras melhorias no código
 

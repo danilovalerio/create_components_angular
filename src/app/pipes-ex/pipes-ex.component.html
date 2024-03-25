@@ -1,12 +1,12 @@
 <!-- Link reference:
   https://angular.io/guide/pipes-overview -->
 
-<h1 [class]="getStyle(person.status)">
+<h1 [class]="person.status | statusClass">
   {{ person.name }}
 </h1>
-<h1 [class]="getStyle(person2.status)">
+<h1 [class]="person2.status | statusClass">
   {{ person2.name }}
 </h1>
-<h1 [class]="getStyle(person3.status)">
+<h1 [class]="person3.status | statusClass">
   {{ person3.name }}
 </h1>
