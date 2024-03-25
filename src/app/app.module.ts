@@ -10,9 +10,17 @@ import { NgifComponentComponent } from './ngif-component/ngif-component.componen
 import { NgforComponentComponent } from './ngfor-component/ngfor-component.component';
 import { PersonComponent } from './person/person.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
+import { NgclassComponent } from './ngclass/ngclass.component';
 
 @NgModule({
-  declarations: [AppComponent, NgifComponentComponent, NgforComponentComponent, PersonComponent, NgStyleComponent],
+  declarations: [
+    AppComponent,
+    NgifComponentComponent,
+    NgforComponentComponent,
+    PersonComponent,
+    NgStyleComponent,
+    NgclassComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, ComponentsModule, FormsModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
