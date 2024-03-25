@@ -12,7 +12,7 @@ export class NgclassComponent {
     this.isGreen = true;
   }
 
-  setToOranage() {
+  setToOrange() {
     this.isGreen = false;
   }
 }
