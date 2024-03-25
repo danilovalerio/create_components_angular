@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './pipes-ex.component.scss',
 })
 export class PipesExComponent {
-  name: string = 'Danilo';
-  person = { name: 'Daniela', age: 'xx' };
+  person = { name: 'Daniela', status: 1 };
+  person2 = { name: 'Olivia', status: 2 };
+  person3 = { name: 'Danilo', status: 3 };
 }

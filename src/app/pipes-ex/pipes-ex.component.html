@@ -1,4 +1,30 @@
 <!-- Link reference:
   https://angular.io/guide/pipes-overview -->
-<h1>{{ name | uppercase }}</h1>
-<h1>{{ person | json }}</h1>
+
+<h1
+  [class]="{
+  'active':person.status === 1,
+  'partial':person.status === 2,
+  'blocked':person.status === 3,
+}"
+>
+  {{ person.name }}
+</h1>
+<h1
+  [class]="{
+  'active':person2.status === 1,
+  'partial':person2.status === 2,
+  'blocked':person2.status === 3,
+}"
+>
+  {{ person2.name }}
+</h1>
+<h1
+  [class]="{
+  'active':person3.status === 1,
+  'partial':person3.status === 2,
+  'blocked':person3.status === 3,
+}"
+>
+  {{ person3.name }}
+</h1>
