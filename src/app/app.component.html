@@ -1,13 +1,12 @@
+<!-- Adicionar um efeito que ao passar o mouse ele expanda o conteúdo -->
 <mat-accordion>
-  <!-- Adicionar um efeito que ao passar o mouse ele expanda o conteúdo -->
+  <!-- Fundamentos I - conteúdo -->
   <mat-expansion-panel togglePosition="before">
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        Fundamentos de Componentes e Diretivas
-      </mat-panel-title>
+      <mat-panel-title> Fundamentos I</mat-panel-title>
       <mat-panel-description>
-        Pipes - NG Class - Ng Style - NG For - Cards Components Dinâmicos -
-        Toggle - Two Way Data Binding
+        Pipes, NG Class, Ng Style, NG For, Cards Components Dinâmicos, Toggle,
+        Two Way Data Binding
       </mat-panel-description>
     </mat-expansion-panel-header>
     <mat-expansion-panel
@@ -75,4 +74,25 @@
       <h4>Nome digitado: {{ name }}</h4>
     </mat-expansion-panel>
   </mat-expansion-panel>
+
+  <!-- Fundamentos II - conteúdo -->
+  <mat-expansion-panel togglePosition="before">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Fundamentos II</mat-panel-title>
+      <mat-panel-description> Template Variables </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Exemplos de Uso </mat-panel-title>
+        <mat-panel-description>
+          clique para {{ panelOpenState ? "fechar" : "abrir" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
 </mat-accordion>
+<h2>Template Variables</h2>
+<app-temp-variables></app-temp-variables>
