@@ -2,3 +2,9 @@
 <input type="text" #meuInput ngModel />
 <br />
 Valor do input: {{ meuInput.value }}
+<br />
+<!-- Nesse segundo exemplo fazemos a mesma coisa com o twoWayDatabinding então não precisaria usar o template variable, só usar quando for realmente indispensável, pois é uma variável a mais na aplicação. -->
+<input type="text" [(ngModel)]="exemplo2" />
+<br />
+Valor do input sem template variable:
+{{ exemplo2 }}
