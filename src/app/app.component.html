@@ -1,35 +1,57 @@
-<h3>PIPES - examples</h3>
-<app-pipes-ex></app-pipes-ex>
-<hr />
-<br />
-<h3>NG CLASS - example</h3>
-<app-ngclass></app-ngclass>
-<hr />
-<br />
-<h3>NG STYLE - example</h3>
-<app-ng-style></app-ng-style>
-<hr />
-<br />
-<h3>NG FOR - example</h3>
-<app-ngfor-component></app-ngfor-component>
-<hr />
+<mat-accordion>
+  <!-- Adicionar um efeito que ao passar o mouse ele expanda o conteúdo -->
+  <mat-expansion-panel togglePosition="before">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Fundamentos de Componentes e Diretivas
+      </mat-panel-title>
+      <mat-panel-description>
+        Pipes - NG Class - Ng Style - NG For - Cards Components Dinâmicos -
+        Toggle - Two Way Data Binding
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Exemplos de Uso </mat-panel-title>
+        <mat-panel-description>
+          clique para {{ panelOpenState ? "fechar" : "abrir" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h3>PIPES - examples</h3>
+      <app-pipes-ex></app-pipes-ex>
+      <hr />
+      <br />
+      <h3>NG CLASS - example</h3>
+      <app-ngclass></app-ngclass>
+      <hr />
+      <br />
+      <h3>NG STYLE - example</h3>
+      <app-ng-style></app-ng-style>
+      <hr />
+      <br />
+      <h3>NG FOR - example</h3>
+      <app-ngfor-component></app-ngfor-component>
+      <hr />
 
-<div class="cards-container">
-  <app-card
-    [planType]="card.plan.type"
-    [planPrice]="card.plan.price"
-    [cardStyle]="'orange'"
-    (btnClicado)="onCardButtonClicked()"
-  ></app-card>
+      <div class="cards-container">
+        <app-card
+          [planType]="card.plan.type"
+          [planPrice]="card.plan.price"
+          [cardStyle]="'orange'"
+          (btnClicado)="onCardButtonClicked()"
+        ></app-card>
 
-  <app-card
-    [planType]="card2.plan.type"
-    [planPrice]="card2.plan.price"
-    [cardStyle]="'gray'"
-    (btnClicado)="onCardButtonClicked()"
-  ></app-card>
-</div>
-<!--
+        <app-card
+          [planType]="card2.plan.type"
+          [planPrice]="card2.plan.price"
+          [cardStyle]="'gray'"
+          (btnClicado)="onCardButtonClicked()"
+        ></app-card>
+      </div>
+      <!--
 <br />
 <input
   #meuInput
@@ -38,16 +60,19 @@
   placeholder="Digite o plano"
 />-->
 
-<hr />
-<app-ngif-component></app-ngif-component>
+      <hr />
+      <app-ngif-component></app-ngif-component>
 
-<hr />
-<h3><b>Two Way Data Binding</b></h3>
-<!--
+      <hr />
+      <h3><b>Two Way Data Binding</b></h3>
+      <!--
   ngModel -> Input
   ngModelChange -> Output
   [(ngModel)] -> Two Way Data Binding
  -->
-<input type="text" [(ngModel)]="name" placeholder="Nome" />
+      <input type="text" [(ngModel)]="name" placeholder="Nome" />
 
-<h4>Nome digitado: {{ name }}</h4>
+      <h4>Nome digitado: {{ name }}</h4>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+</mat-accordion>

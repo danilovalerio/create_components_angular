@@ -13,6 +13,7 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgclassComponent } from './ngclass-c/ngclass.component';
 import { PipesExComponent } from './pipes-ex/pipes-ex.component';
 import { StatusClassPipe } from './pipes/status-class.pipe';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,13 @@ import { StatusClassPipe } from './pipes/status-class.pipe';
     PipesExComponent,
     StatusClassPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, ComponentsModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatExpansionModule,
+    ComponentsModule,
+    FormsModule,
+  ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })

@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'criacao_components';
 
+  panelOpenState = false;
+
   plan = {
     type: 'Simples',
     price: 100,
