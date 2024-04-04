@@ -1,1 +1,4 @@
-<p>temp-variables works!</p>
+<!-- Aqui a template variable é o #meuInput com ngModel para usar o change detection do angular -->
+<input type="text" #meuInput ngModel />
+<br />
+Valor do input: {{ meuInput.value }}
