@@ -19,7 +19,7 @@ export class ViewChildrenComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     console.log(this.botoesEl);
-    console.log(this.botoesEl.toArray);
+    console.log(this.botoesEl.toArray());
 
     const primeiro = this.botoesEl.toArray()[0];
 
