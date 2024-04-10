@@ -53,6 +53,16 @@ export class ViewChildrenComponent implements AfterViewInit {
   }
 
   first() {
+    //exemplo 1
     console.log(this.botoesEl.first);
+    const primeiro = this.botoesEl.find(
+      (meuBtn) => meuBtn.nativeElement.className === 'botao-0'
+    );
+    console.log('primeiro: ' + primeiro?.nativeElement.className);
+
+    const primeiroComArray = this.botoesEl.toArray()[0];
+    console.log(
+      'primeiro com array: ' + primeiroComArray.nativeElement.className
+    );
   }
 }
