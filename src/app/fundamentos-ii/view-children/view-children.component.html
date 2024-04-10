@@ -1,4 +1,9 @@
-<button #meuBotao *ngFor="let btn of buttonList" (click)="changeColor($event)">
+<button
+  #meuBotao
+  class="botao-{{ i }}"
+  *ngFor="let btn of buttonList; let i = index"
+  (click)="changeColor($event)"
+>
   {{ btn }}
 </button>
 
