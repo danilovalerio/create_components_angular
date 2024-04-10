@@ -1,12 +1,18 @@
 import { FilhoViewchildComponent } from './../filho-viewchild/filho-viewchild.component';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-view-child',
   templateUrl: './view-child.component.html',
   styleUrl: './view-child.component.scss',
 })
-export class ViewChildComponent {
+export class ViewChildComponent implements OnInit, AfterViewInit {
   @ViewChild('meuInput')
   meuInputEL!: ElementRef<HTMLInputElement>;
 
@@ -19,6 +25,19 @@ export class ViewChildComponent {
    */
   @ViewChild('filhoComp')
   filhoCompReferencia!: FilhoViewchildComponent;
+
+  constructor() {
+    console.log('constructor');
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit', this.meuInputEL);
+  }
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit', this.meuInputEL);
+    this.meuInputEL.nativeElement.focus();
+  }
 
   updateInputText() {
     this.meuInputEL.nativeElement.value = 'Texto Atualizado';
