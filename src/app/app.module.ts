@@ -17,6 +17,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { TempVariablesComponent } from './fundamentos-ii/temp-variables/temp-variables.component';
 import { ViewChildComponent } from './fundamentos-ii/view-child/view-child.component';
 import { FilhoViewchildComponent } from './fundamentos-ii/filho-viewchild/filho-viewchild.component';
+import { ViewChildrenComponent } from './fundamentos-ii/view-children/view-children.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FilhoViewchildComponent } from './fundamentos-ii/filho-viewchild/filho-
     TempVariablesComponent,
     ViewChildComponent,
     FilhoViewchildComponent,
+    ViewChildrenComponent,
   ],
   imports: [
     BrowserModule,
