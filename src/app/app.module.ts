@@ -15,6 +15,7 @@ import { PipesExComponent } from './pipes-ex/pipes-ex.component';
 import { StatusClassPipe } from './pipes/status-class.pipe';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { TempVariablesComponent } from './fundamentos-ii/temp-variables/temp-variables.component';
+import { ViewChildComponent } from './fundamentos-ii/view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TempVariablesComponent } from './fundamentos-ii/temp-variables/temp-var
     PipesExComponent,
     StatusClassPipe,
     TempVariablesComponent,
+    ViewChildComponent,
   ],
   imports: [
     BrowserModule,

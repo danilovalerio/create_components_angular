@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class TempVariablesComponent {
   exemplo2 = '';
+
+  clicou(input: HTMLInputElement) {
+    console.log(input.value);
+  }
 }

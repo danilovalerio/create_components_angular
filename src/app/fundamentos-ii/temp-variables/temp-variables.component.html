@@ -1,5 +1,7 @@
 <!-- Aqui a template variable é o #meuInput com ngModel para usar o change detection do angular -->
-<input type="text" #meuInput ngModel />
+<input type="text" #meuInput ngModel /><button (click)="clicou(meuInput)">
+  Atualizar
+</button>
 <br />
 Valor do input: {{ meuInput.value }}
 <br />
@@ -8,3 +10,4 @@ Valor do input: {{ meuInput.value }}
 <br />
 Valor do input sem template variable:
 {{ exemplo2 }}
+<hr />
