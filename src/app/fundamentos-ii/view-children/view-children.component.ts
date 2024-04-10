@@ -51,4 +51,8 @@ export class ViewChildrenComponent implements AfterViewInit {
       btn.nativeElement.style.color = 'black';
     });
   }
+
+  first() {
+    console.log(this.botoesEl.first);
+  }
 }
