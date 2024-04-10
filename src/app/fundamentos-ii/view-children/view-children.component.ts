@@ -19,6 +19,15 @@ export class ViewChildrenComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     console.log(this.botoesEl);
+    console.log(this.botoesEl.toArray);
+
+    const primeiro = this.botoesEl.toArray()[0];
+
+    /**
+     * Primeiro item da lista recebe o bgColor azul
+     */
+    primeiro.nativeElement.style.backgroundColor = 'blue';
+    primeiro.nativeElement.style.color = 'white';
   }
 
   changeColor(event: Event) {
