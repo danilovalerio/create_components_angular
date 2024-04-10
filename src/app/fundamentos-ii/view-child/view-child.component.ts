@@ -13,7 +13,7 @@ import {
   styleUrl: './view-child.component.scss',
 })
 export class ViewChildComponent implements OnInit, AfterViewInit {
-  @ViewChild('meuInput')
+  @ViewChild('meuInput', { static: true })
   meuInputEL!: ElementRef<HTMLInputElement>;
 
   @ViewChild('minhaDiv')
