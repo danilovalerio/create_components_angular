@@ -18,6 +18,7 @@ import { TempVariablesComponent } from './fundamentos-ii/temp-variables/temp-var
 import { ViewChildComponent } from './fundamentos-ii/view-child/view-child.component';
 import { FilhoViewchildComponent } from './fundamentos-ii/filho-viewchild/filho-viewchild.component';
 import { ViewChildrenComponent } from './fundamentos-ii/view-children/view-children.component';
+import { SemDiretivaComponent } from './fundamentos-ii/sem-diretiva/sem-diretiva.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ViewChildrenComponent } from './fundamentos-ii/view-children/view-child
     ViewChildComponent,
     FilhoViewchildComponent,
     ViewChildrenComponent,
+    SemDiretivaComponent,
   ],
   imports: [
     BrowserModule,
