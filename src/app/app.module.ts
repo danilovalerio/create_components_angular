@@ -19,6 +19,7 @@ import { ViewChildComponent } from './fundamentos-ii/view-child/view-child.compo
 import { FilhoViewchildComponent } from './fundamentos-ii/filho-viewchild/filho-viewchild.component';
 import { ViewChildrenComponent } from './fundamentos-ii/view-children/view-children.component';
 import { SemDiretivaComponent } from './fundamentos-ii/sem-diretiva/sem-diretiva.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SemDiretivaComponent } from './fundamentos-ii/sem-diretiva/sem-diretiva
     FilhoViewchildComponent,
     ViewChildrenComponent,
     SemDiretivaComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
