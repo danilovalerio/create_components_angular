@@ -1,10 +1,10 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[appStyle]'
+  selector: '[appStyle]',
 })
 export class StyleDirective {
-
-  constructor() { }
-
+  @HostBinding('style.backgroundColor') bgColor = 'orange';
+  @HostBinding('style.color') color = 'white';
+  @HostBinding('style.fontSize') size = '22px';
 }

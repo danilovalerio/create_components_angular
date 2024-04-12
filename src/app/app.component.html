@@ -119,3 +119,14 @@
 <button [attr.disabled]="true">Meu Botão Attr</button>
 <button [disabled]="true">Meu Botão Prop - Mais usado</button>
 <button appDisabled>Meu Botão Diretiva Prop</button>
+<p style="background-color: orange; color: white">Parágrafo Normal</p>
+<p [attr.style]="'background-color: orange; color: white;'">Par. Attr</p>
+<p [style]="'background-color: orange; color: white;'">Par. Prop</p>
+<p
+  [style]="{
+    backgroundColor: 'orange',
+    color: 'white',}"
+>
+  Par. Prop Obj
+</p>
+<p appStyle>Par. Diretiva</p>
