@@ -23,6 +23,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { ComDiretivaComponent } from './fundamentos-ii/com-diretiva/com-diretiva.component';
 import { DisabledDirective } from './directives/disabled.directive';
 import { StyleDirective } from './directives/style.directive';
+import { ClassDirective } from './directives/class.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { StyleDirective } from './directives/style.directive';
     ComDiretivaComponent,
     DisabledDirective,
     StyleDirective,
+    ClassDirective,
   ],
   imports: [
     BrowserModule,
