@@ -21,6 +21,7 @@ import { ViewChildrenComponent } from './fundamentos-ii/view-children/view-child
 import { SemDiretivaComponent } from './fundamentos-ii/sem-diretiva/sem-diretiva.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { ComDiretivaComponent } from './fundamentos-ii/com-diretiva/com-diretiva.component';
+import { DisabledDirective } from './directives/disabled.directive';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ComDiretivaComponent } from './fundamentos-ii/com-diretiva/com-diretiva
     SemDiretivaComponent,
     HighlightDirective,
     ComDiretivaComponent,
+    DisabledDirective,
   ],
   imports: [
     BrowserModule,
