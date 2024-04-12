@@ -22,6 +22,7 @@ import { SemDiretivaComponent } from './fundamentos-ii/sem-diretiva/sem-diretiva
 import { HighlightDirective } from './directives/highlight.directive';
 import { ComDiretivaComponent } from './fundamentos-ii/com-diretiva/com-diretiva.component';
 import { DisabledDirective } from './directives/disabled.directive';
+import { StyleDirective } from './directives/style.directive';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { DisabledDirective } from './directives/disabled.directive';
     HighlightDirective,
     ComDiretivaComponent,
     DisabledDirective,
+    StyleDirective,
   ],
   imports: [
     BrowserModule,
