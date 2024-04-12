@@ -1,10 +1,9 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[appDisabled]'
+  selector: '[appDisabled]',
 })
 export class DisabledDirective {
-
-  constructor() { }
-
+  //@HostBinding('attr.disabled') attrDisabled = true;
+  @HostBinding('disabled') propDisabled = false;
 }
