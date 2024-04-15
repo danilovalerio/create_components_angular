@@ -27,6 +27,8 @@ import { ClassDirective } from './directives/class.directive';
 import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirective } from './directives/input-background.directive';
 import { ElementRefComponent } from './fundamentos-iii/element-ref/element-ref.component';
+import { FocusSecondInputDirective } from './directives/focus-second-input.directive';
+import { ElementRefDirectiveComponent } from './fundamentos-iii/element-ref-directive/element-ref-directive.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { ElementRefComponent } from './fundamentos-iii/element-ref/element-ref.c
     ListenerDirective,
     InputBackgroundDirective,
     ElementRefComponent,
+    FocusSecondInputDirective,
+    ElementRefDirectiveComponent,
   ],
   imports: [
     BrowserModule,
