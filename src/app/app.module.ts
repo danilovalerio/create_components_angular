@@ -24,6 +24,7 @@ import { ComDiretivaComponent } from './fundamentos-ii/com-diretiva/com-diretiva
 import { DisabledDirective } from './directives/disabled.directive';
 import { StyleDirective } from './directives/style.directive';
 import { ClassDirective } from './directives/class.directive';
+import { ListenerDirective } from './directives/listener.directive';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ClassDirective } from './directives/class.directive';
     DisabledDirective,
     StyleDirective,
     ClassDirective,
+    ListenerDirective,
   ],
   imports: [
     BrowserModule,
