@@ -100,43 +100,89 @@
       <h2>ViewChildren</h2>
       <app-view-children></app-view-children>
       <hr />
+      <h2>Diretivas</h2>
+      <!-- COMP X -->
+      <p>Sem diretiva</p>
+      <app-sem-diretiva></app-sem-diretiva>
+
+      <!-- COMP Y -->
+      <app-sem-diretiva></app-sem-diretiva>
+
+      <p>Com diretiva HostBinding + HostListener</p>
+      <!-- COMP Z -->
+      <app-com-diretiva></app-com-diretiva>
+      <p>Property e Attribute Binding</p>
+      <button disabled>Meu Botão</button>
+      <button [attr.disabled]="true">Meu Botão Attr</button>
+      <button [disabled]="true">Meu Botão Prop - Mais usado</button>
+      <button appDisabled>Meu Botão Diretiva Prop</button>
+      <p style="background-color: orange; color: white">Parágrafo Normal</p>
+      <p [attr.style]="'background-color: orange; color: white;'">Par. Attr</p>
+      <p [style]="'background-color: orange; color: white;'">Par. Prop</p>
+      <p
+        [style]="{
+    backgroundColor: 'orange',
+    color: 'white',}"
+      >
+        Par. Prop Obj
+      </p>
+      <p appStyle>Par. Diretiva</p>
+      <p>Class Binding</p>
+      <p class="meu-texto">Normal</p>
+      <p appClass>Class Diretiva</p>
+      <p>Listener em Diretiva</p>
+      <input appListener />
+      <p>Passar parâmetros para Diretiva de Atributo</p>
+      <input appInputBackground="blue" tColor="white" />
+      <br />
+      <!-- Passando o valor direto de uma propriedade do appComponent -->
+      <input [appInputBackground]="appCompBgColor" tColor="white" />
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+  <!-- Fundamentos III - conteúdo -->
+  <mat-expansion-panel togglePosition="before">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Fundamentos III</mat-panel-title>
+      <mat-panel-description> ElementRef em Componentes </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Exemplos de Uso </mat-panel-title>
+        <mat-panel-description>
+          clique para {{ panelOpenState ? "fechar" : "abrir" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h2>Aqui o proximo elemento</h2>
+      <app-temp-variables></app-temp-variables>
+      <hr />
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+  <!-- Tópico Futuro - conteúdo -->
+  <mat-expansion-panel togglePosition="before">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Tópico Demo</mat-panel-title>
+      <mat-panel-description>
+        Descrição do que terá nesse tópico
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Exemplos de Uso </mat-panel-title>
+        <mat-panel-description>
+          clique para {{ panelOpenState ? "fechar" : "abrir" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h2>Aqui o proximo elemento</h2>
+      <app-temp-variables></app-temp-variables>
+      <hr />
     </mat-expansion-panel>
   </mat-expansion-panel>
 </mat-accordion>
-<h2>Diretivas</h2>
-<!-- COMP X -->
-<p>Sem diretiva</p>
-<app-sem-diretiva></app-sem-diretiva>
-
-<!-- COMP Y -->
-<app-sem-diretiva></app-sem-diretiva>
-
-<p>Com diretiva HostBinding + HostListener</p>
-<!-- COMP Z -->
-<app-com-diretiva></app-com-diretiva>
-<p>Property e Attribute Binding</p>
-<button disabled>Meu Botão</button>
-<button [attr.disabled]="true">Meu Botão Attr</button>
-<button [disabled]="true">Meu Botão Prop - Mais usado</button>
-<button appDisabled>Meu Botão Diretiva Prop</button>
-<p style="background-color: orange; color: white">Parágrafo Normal</p>
-<p [attr.style]="'background-color: orange; color: white;'">Par. Attr</p>
-<p [style]="'background-color: orange; color: white;'">Par. Prop</p>
-<p
-  [style]="{
-    backgroundColor: 'orange',
-    color: 'white',}"
->
-  Par. Prop Obj
-</p>
-<p appStyle>Par. Diretiva</p>
-<p>Class Binding</p>
-<p class="meu-texto">Normal</p>
-<p appClass>Class Diretiva</p>
-<p>Listener em Diretiva</p>
-<input appListener />
-<p>Passar parâmetros para Diretiva de Atributo</p>
-<input appInputBackground="blue" tColor="white" />
-<br />
-<!-- Passando o valor direto de uma propriedade do appComponent -->
-<input [appInputBackground]="appCompBgColor" tColor="white" />
+<h2>ElementRef em Componentes</h2>
+<hr />
