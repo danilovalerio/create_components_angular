@@ -26,6 +26,7 @@ import { StyleDirective } from './directives/style.directive';
 import { ClassDirective } from './directives/class.directive';
 import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirective } from './directives/input-background.directive';
+import { ElementRefComponent } from './fundamentos-iii/element-ref/element-ref.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { InputBackgroundDirective } from './directives/input-background.directiv
     ClassDirective,
     ListenerDirective,
     InputBackgroundDirective,
+    ElementRefComponent,
   ],
   imports: [
     BrowserModule,
