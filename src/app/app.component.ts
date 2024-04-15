@@ -42,4 +42,6 @@ export class AppComponent {
     console.log(event);
     this.name = event;
   }
+
+  appCompBgColor = 'green';
 }

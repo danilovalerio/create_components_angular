@@ -136,4 +136,7 @@
 <p>Listener em Diretiva</p>
 <input appListener />
 <p>Passar parâmetros para Diretiva de Atributo</p>
-<input appInputBackground />
+<input appInputBackground="blue" tColor="white" />
+<br />
+<!-- Passando o valor direto de uma propriedade do appComponent -->
+<input [appInputBackground]="appCompBgColor" tColor="white" />
