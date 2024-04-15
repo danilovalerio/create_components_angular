@@ -42,4 +42,15 @@ export class ElementRefComponent implements OnInit, AfterViewInit {
     this.divElemento.nativeElement.textContent = 'sou uma div com element Ref';
     this.divElemento.nativeElement.classList.add('minha-class-nova-div');
   }
+
+  criarElemento() {
+    //criando uma nova div, inferida a tipagem do elemento com o createElement
+    const novaDiv = document.createElement('div');
+
+    novaDiv.textContent = 'Sou a nova div!';
+    novaDiv.classList.add('bg-green');
+
+    //acesso a referência do template
+    this._elementoRef.nativeElement.appendChild(novaDiv);
+  }
 }
