@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +32,11 @@ import { ElementRefDirectiveComponent } from './fundamentos-iii/element-ref-dire
 import { ElementRefServiceComponent } from './fundamentos-iii/element-ref-service/element-ref-service.component';
 import { XssExemploComponent } from './fundamentos-iii/xss-exemplo/xss-exemplo.component';
 import { TestesJestComponent } from './testes-jest/testes-jest.component';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -69,7 +74,11 @@ import { TestesJestComponent } from './testes-jest/testes-jest.component';
     ComponentsModule,
     FormsModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [
+    provideAnimationsAsync(),
+    importProvidersFrom(HttpClientModule),
+    provideHttpClient(withFetch()),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

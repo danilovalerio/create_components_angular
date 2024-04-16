@@ -1,1 +1,17 @@
-<p>testes-jest works!</p>
+<html>
+  <head>
+    <title>Testes</title>
+  </head>
+  <body>
+    <table *ngIf="!ocorreuErro; else templateErro">
+      <tr *ngFor="let estado of estados">
+        <td>{{ estado.sigla }}</td>
+        <td>{{ estado.nome }}</td>
+      </tr>
+    </table>
+    <router-outlet></router-outlet>
+  </body>
+</html>
+<ng-template #templateErro>
+  <div class="erro">Ocorreu um erro inesperado</div>
+</ng-template>
