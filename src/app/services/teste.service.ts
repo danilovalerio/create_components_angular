@@ -9,9 +9,9 @@ import { ElementRef, Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TesteService {
-  constructor(private _elementoRef: ElementRef) {}
+  //constructor(private _elementoRef: ElementRef) {}
 
-  criar() {
+  criar(elementoRef: ElementRef) {
     //criando uma nova div, inferida a tipagem do elemento com o createElement
     const novaDiv = document.createElement('div');
 
@@ -19,6 +19,6 @@ export class TesteService {
     novaDiv.classList.add('bg-green');
 
     //acesso a referência do template
-    this._elementoRef.nativeElement.appendChild(novaDiv);
+    elementoRef.nativeElement.appendChild(novaDiv);
   }
 }

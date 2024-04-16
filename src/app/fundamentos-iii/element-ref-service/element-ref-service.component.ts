@@ -15,4 +15,8 @@ export class ElementRefServiceComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {}
+
+  criarElemento() {
+    this._testeService.criar(this._elementoRef);
+  }
 }
