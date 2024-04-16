@@ -29,6 +29,7 @@ import { InputBackgroundDirective } from './directives/input-background.directiv
 import { ElementRefComponent } from './fundamentos-iii/element-ref/element-ref.component';
 import { FocusSecondInputDirective } from './directives/focus-second-input.directive';
 import { ElementRefDirectiveComponent } from './fundamentos-iii/element-ref-directive/element-ref-directive.component';
+import { ElementRefServiceComponent } from './fundamentos-iii/element-ref-service/element-ref-service.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ElementRefDirectiveComponent } from './fundamentos-iii/element-ref-dire
     ElementRefComponent,
     FocusSecondInputDirective,
     ElementRefDirectiveComponent,
+    ElementRefServiceComponent,
   ],
   imports: [
     BrowserModule,
