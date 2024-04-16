@@ -160,6 +160,35 @@
       <h2>ElementRef em Componentes</h2>
       <app-element-ref></app-element-ref>
       <hr />
+      <app-element-ref-directive></app-element-ref-directive>
+      <hr />
+      <app-element-ref-service></app-element-ref-service>
+      <hr />
+      <app-xss-exemplo></app-xss-exemplo>
+      <hr />
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+  <!-- Testes com Jest - conteúdo -->
+  <mat-expansion-panel togglePosition="before">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Testes Unitários</mat-panel-title>
+      <mat-panel-description>
+        Teste unitário usando Jest
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Exemplos de Uso </mat-panel-title>
+        <mat-panel-description>
+          clique para {{ panelOpenState ? "fechar" : "abrir" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h2>Aqui o proximo elemento</h2>
+
+      <hr />
     </mat-expansion-panel>
   </mat-expansion-panel>
   <!-- Tópico Futuro - conteúdo -->
@@ -188,9 +217,5 @@
 </mat-accordion>
 
 <br />
-<app-element-ref-directive></app-element-ref-directive>
-<hr />
-<app-element-ref-service></app-element-ref-service>
-<hr />
-<app-xss-exemplo></app-xss-exemplo>
+<app-testes-jest></app-testes-jest>
 <hr />

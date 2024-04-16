@@ -31,6 +31,7 @@ import { FocusSecondInputDirective } from './directives/focus-second-input.direc
 import { ElementRefDirectiveComponent } from './fundamentos-iii/element-ref-directive/element-ref-directive.component';
 import { ElementRefServiceComponent } from './fundamentos-iii/element-ref-service/element-ref-service.component';
 import { XssExemploComponent } from './fundamentos-iii/xss-exemplo/xss-exemplo.component';
+import { TestesJestComponent } from './testes-jest/testes-jest.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { XssExemploComponent } from './fundamentos-iii/xss-exemplo/xss-exemplo.c
     ElementRefDirectiveComponent,
     ElementRefServiceComponent,
     XssExemploComponent,
+    TestesJestComponent,
   ],
   imports: [
     BrowserModule,
