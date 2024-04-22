@@ -37,6 +37,7 @@ import {
   provideHttpClient,
   withFetch,
 } from '@angular/common/http';
+import { NgContentProjecaoComponent } from './fundamentos-iv/ng-content-projecao/ng-content-projecao.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import {
     ElementRefServiceComponent,
     XssExemploComponent,
     TestesJestComponent,
+    NgContentProjecaoComponent,
   ],
   imports: [
     BrowserModule,

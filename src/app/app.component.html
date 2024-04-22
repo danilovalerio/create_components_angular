@@ -186,8 +186,31 @@
           clique para {{ panelOpenState ? "fechar" : "abrir" }}
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <h2>Aqui o proximo elemento</h2>
+      <h2>Testes unitários</h2>
+      <app-testes-jest></app-testes-jest>
 
+      <hr />
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+  <mat-expansion-panel togglePosition="before">
+    <mat-expansion-panel-header>
+      <mat-panel-title> Fundamentos IV</mat-panel-title>
+      <mat-panel-description>
+        Projeção de Conteúdos e Estilização com Diretivas
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Exemplos de Uso </mat-panel-title>
+        <mat-panel-description>
+          clique para {{ panelOpenState ? "fechar" : "abrir" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h2>Aqui o proximo elemento</h2>
+      <app-temp-variables></app-temp-variables>
       <hr />
     </mat-expansion-panel>
   </mat-expansion-panel>
@@ -217,4 +240,4 @@
 </mat-accordion>
 
 <br />
-<app-testes-jest></app-testes-jest>
+<app-ng-content-projecao></app-ng-content-projecao>
